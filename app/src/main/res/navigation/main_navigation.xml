@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.swapplication.main.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_bandasFragment"
+            app:destination="@id/bandasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bandasFragment"
+        android:name="com.example.swapplication.main.ui.BandasFragment"
+        android:label="fragment_bandas"
+        tools:layout="@layout/fragment_bandas" >
+        <action
+            android:id="@+id/action_bandasFragment_to_cadastrarBandaFragment"
+            app:destination="@id/cadastrarBandaFragment" />
+        <action
+            android:id="@+id/action_bandasFragment_to_editarBandaFragment"
+            app:destination="@id/editarBandaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastrarBandaFragment"
+        android:name="com.example.swapplication.main.ui.CadastrarBandaFragment"
+        android:label="fragment_cadastrar_banda"
+        tools:layout="@layout/fragment_cadastrar_banda" />
+    <fragment
+        android:id="@+id/editarBandaFragment"
+        android:name="com.example.swapplication.main.ui.EditarBandaFragment"
+        android:label="fragment_editar_banda"
+        tools:layout="@layout/fragment_editar_banda" />
+</navigation>
